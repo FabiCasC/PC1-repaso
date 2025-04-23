@@ -141,6 +141,32 @@ public class AlgoritmosDeOrdenamiento {
         }
     }
 
+public static void generarNumerosAleatorios() {
+        Random rand = new Random();
+        int cantidad = 10;
+        int min = 1;
+        int max = 100;
+
+        System.out.println("Lista aleatoria:");
+        for (int i = 0; i < cantidad; i++) {
+            int numero = rand.nextInt(max - min + 1) + min;
+            System.out.print(numero + " ");
+        }
+
+@Test
+
+public void testBurbujaMejorado() {
+
+    int[] entrada = {5, 2, 9, 1, 5, 6};
+
+    int[] esperado = {1, 2, 5, 5, 6, 10};
+
+    AlgoritmosDeOrdenamiento.burbujaMejorado(entrada);
+
+    assertArrayEquals(esperado, entrada);
+
+}
+
     // Método de Ordenamiento Polifásico Didáctico
     public static void polifasico(int[] datos) {
         int[][] runs = generarRuns(datos);
